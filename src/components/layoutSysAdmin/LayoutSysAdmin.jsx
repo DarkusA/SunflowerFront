@@ -1,22 +1,22 @@
-import "./LayoutSysAdmin.css";
-import { Link, Outlet } from "react-router";
+    import "./LayoutSysAdmin.css";
+    import { Link, Outlet } from "react-router";
 
-function LayoutSysAdmin() {
-    return (
-        <div className="layout">
-            <header className="header">
-                <h1>Sunflower</h1>
-                <nav>
-                    <Link to="/catalog">Catalog</Link>
-                    <span>|</span>
-                    <Link to="/users">Users</Link>
-                </nav>
-            </header>
-            <main>
-                <Outlet />
-            </main>
-        </div>
-    );
-}
+    const LayoutSysAdmin = () => {
+        return (
+            <div className="layout">
+                <header className="header">
+                    <h1>Sunflower</h1>
+                    <nav>
+                        <Link to="/catalog">Catalog</Link>
+                        <span>|</span>
+                        <Link to="/users">Users</Link>
+                    </nav>
+                </header>
+                <main>
+                    <Outlet />
+                </main>
+            </div>
+        );  
+    }
 
-export default LayoutSysAdmin;
+    export default LayoutSysAdmin;
