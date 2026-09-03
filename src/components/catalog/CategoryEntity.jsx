@@ -1,6 +1,6 @@
 import { Card, Button } from "react-bootstrap";
 
-const CategoryEntity = ({ id, name }) => {
+const CategoryEntity = ({ id, name, onEdit, onDelete }) => {
     return (
         <Card style={{ width: "18rem" }}>
             <Card.Body>
@@ -8,10 +8,10 @@ const CategoryEntity = ({ id, name }) => {
                 <Card.Text>
                     <strong>Id:</strong> {id}
                 </Card.Text>
-                <Button variant="warning" style={{ marginRight: "10px" }}>
+                <Button variant="warning" style={{ marginRight: "10px" }} onClick={() => onEdit(id)}>
                     Edit
                 </Button>
-                <Button variant="danger">
+                <Button variant="danger" onClick={() => onDelete(id)}>
                     Delete
                 </Button>
             </Card.Body>
