@@ -16,18 +16,16 @@ const Users = () => {
     const [nextId, setNextId] = useState(2);
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
-    const [role, setRole] = useState("");
+    const [role, setRole] = useState("User");
     const [editingId, setEditingId] = useState(null);
 
     const handleCreate = () => {
-
         const newUser = {
             id: nextId,
             username: username,
             email: email,
             role: role
         };
-
         setUsers([
             ...users,
             newUser
@@ -37,7 +35,7 @@ const Users = () => {
 
         setUsername("");
         setEmail("");
-        setRole("");
+        setRole("User");
     };
 
     const handleDelete = (id) => {
@@ -58,7 +56,6 @@ const Users = () => {
     };
 
     const handleUpdate = () => {
-
         setUsers(
             users.map(user =>
                 user.id === editingId
@@ -74,7 +71,7 @@ const Users = () => {
 
         setUsername("");
         setEmail("");
-        setRole("");
+        setRole("User");
 
         setEditingId(null);
     };
@@ -82,28 +79,24 @@ const Users = () => {
     return (
         <>
             <form>
-
                 <input
                     type="text"
                     placeholder="Username"
                     value={username}
                     onChange={(event) => setUsername(event.target.value)}
                 />
-
                 <input
                     type="email"
                     placeholder="Email"
                     value={email}
                     onChange={(event) => setEmail(event.target.value)}
                 />
-
                 <input
                     type="text"
                     placeholder="Role"
                     value={role}
                     onChange={(event) => setRole(event.target.value)}
                 />
-
                 {editingId === null ? (
                     <button
                         type="button"

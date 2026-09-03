@@ -10,16 +10,10 @@ const UserEntity = ({ id, username, email, role, onDelete, onEdit }) => {
                     <strong>Email:</strong> {email}<br />
                     <strong>Id:</strong> {id}
                 </Card.Text>
-                <Button
-                variant="warning"
-                onClick={() => onEdit(id)}
-                >
+                <Button variant="warning" onClick={() => onEdit(id)} style={{ marginRight: '30px', marginLeft: '50px' }}>
                 Edit
                 </Button>
-                <Button
-                    variant="danger"
-                    onClick={() => onDelete(id)}
-                >
+                <Button variant="danger" onClick={() => onDelete(id)}>
                 Delete
                 </Button>
             </Card.Body>
