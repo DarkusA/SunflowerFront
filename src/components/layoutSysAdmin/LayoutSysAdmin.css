@@ -1,0 +1,41 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: white;
+    -webkit-text-stroke: 1.2px rgb(56, 48, 25);
+    background-color:  #fff132;
+    padding: 10px 25px;
+    border: 0.1px solid rgb(56, 48, 25);
+}
+
+.header nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    background-color: #fff132;
+    height: 58px;
+}
+
+.header nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.4rem;
+}
+
+.header nav span {
+    margin-bottom: 5px;
+    color: black;
+    font-size: 2rem;
+}
+
+.active{
+    font-weight: bold;
+}
